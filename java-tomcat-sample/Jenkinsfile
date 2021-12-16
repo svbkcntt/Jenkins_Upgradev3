@@ -28,7 +28,7 @@ pipeline {
                 timeout(time:5, unit:'DAYS'){
                     input message:'Approve PRODUCTION Deployment?'
                 }
-                echo "Deploy_Application_Prod_Env"
+                build job: 'Deploy_App_to_PROD_Env'
             }
         }
     }
